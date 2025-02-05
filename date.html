@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date</title>
+    <link rel="stylesheet" href="css/date.css" />
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      .answerButton {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      #noButton {
+        position: absolute;
+        transition: all 0.1s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 title="choose a date">Are you free on Friday?</h1>
+    <button class="answerButton" onclick="location.href='activities.html'">
+      Yes, anytime for you <3
+    </button>
+    <button class="answerButton" id="noButton">
+      No I am not
+    </button>
+
+    <script>
+      document.getElementById("noButton").onmouseover = function () {
+        let x = Math.random() * (window.innerWidth - 150);
+        let y = Math.random() * (window.innerHeight - 50);
+        this.style.left = x + "px";
+        this.style.top = y + "px";
+      };
+    </script>
+  </body>
+</html>
